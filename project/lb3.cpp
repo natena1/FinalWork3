@@ -8,20 +8,21 @@
 
 int main()
 {
-    int a, b, c, d;             //вводимы переменные
+    int a1;                 //вводимая переменная
+    int b, c, d;            //вводимы переменные
     int min, n;                 //вспомогательные переменные
     printf("Input 4 numbers:");
-    scanf("%d%d%d%d", &a, &b, &c, &d);  //считывание данных
+    scanf("%d%d%d%d", &a1, &b, &c, &d);  //считывание данных
 
-    min = fabs(a - b);                  //присвоение начального значения min
+    min = fabs(a1 - b);                  //присвоение начального значения min
     n = 0;                              //установление флажка для первой пары чисел
 
-    if (min > fabs(a - c)) {            //проверка на минимальное значение разность
-        min = fabs(a - c);              //присвоение значения min
+    if (min > fabs(a1 - c)) {            //проверка на минимальное значение разность
+        min = fabs(a1 - c);              //присвоение значения min
         n = 1;                          //установление флажка для второй пары чисел
     }
-    if (min > fabs(a - d)) {
-        min = fabs(a - d);
+    if (min > fabs(a1 - d)) {
+        min = fabs(a1 - d);
         n = 2;
     }
     if (min > fabs(b - c)) {
@@ -38,13 +39,13 @@ int main()
     }
     switch (n) {                    //определение по флажку какая пара чисел с минимальной разностью
     case 0:
-        printf("Minimal difference between %d and %d equal: %d\n\n\n", a, b, min);
+        printf("Minimal difference between %d and %d equal: %d\n\n\n", a1, b, min);
         break;
     case 1:
-        printf("Minimal difference between %d and %d equal: %d\n\n\n", a, c, min);
+        printf("Minimal difference between %d and %d equal: %d\n\n\n", a1, c, min);
         break;
     case 2:
-        printf("Minimal difference between %d and %d equal: %d\n\n\n", a, d, min);
+        printf("Minimal difference between %d and %d equal: %d\n\n\n", a1, d, min);
         break;
     case 3:
         printf("Minimal difference between %d and %d equal: %d\n\n\n", b, c, min);
