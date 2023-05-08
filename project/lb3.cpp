@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Привет, Оля!
 int main()
 {
     int a, b, c, d;             //вводимы переменные
